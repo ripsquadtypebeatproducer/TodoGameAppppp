@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="?attr/appBackground">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="60dp"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:paddingHorizontal="16dp" android:background="?attr/appSurface">
+        <ImageView android:id="@+id/btnBack" android:layout_width="32dp" android:layout_height="32dp"
+            android:tint="?attr/appTextSecondary"
+        android:src="@drawable/ic_back" android:padding="4dp"/>
+        <TextView android:id="@+id/tvTitle" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:text="Новая задача" android:textSize="18sp" android:textStyle="bold"
+            android:textColor="?attr/appTextPrimary" android:layout_marginStart="12dp"/>
+    </LinearLayout>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="16dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="Название задачи" android:layout_marginBottom="16dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etTaskTitle"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="textCapSentences"
+                    android:textColor="?attr/appTextPrimary"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="Описание" android:layout_marginBottom="16dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDescription"
+                    android:layout_width="match_parent" android:layout_height="100dp"
+                    android:gravity="top"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:textColor="?attr/appTextPrimary"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Приоритет" android:textSize="14sp"
+                android:textColor="?attr/appTextSecondary" android:layout_marginBottom="8dp"/>
+            <RadioGroup android:id="@+id/rgPriority" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+                <RadioButton android:id="@+id/rbLow" android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:layout_weight="1"
+                    android:text="Низкий" android:textColor="@color/priority_low"/>
+                <RadioButton android:id="@+id/rbMedium" android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:layout_weight="1"
+                    android:text="Средний" android:textColor="@color/priority_medium"
+                    android:checked="true"/>
+                <RadioButton android:id="@+id/rbHigh" android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:layout_weight="1"
+                    android:text="Высокий" android:textColor="@color/priority_high"/>
+            </RadioGroup>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Папка" android:textSize="14sp"
+                android:textColor="?attr/appTextSecondary" android:layout_marginBottom="8dp"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+                <Spinner android:id="@+id/spinnerCategory" android:layout_width="0dp"
+                    android:layout_weight="1" android:layout_height="48dp"
+                    android:background="?attr/appSurface"/>
+                <Button android:id="@+id/btnNewCategory" android:layout_width="48dp"
+                    android:layout_height="48dp" android:text="+" android:textSize="24sp"
+                    android:textColor="@android:color/white" android:layout_marginStart="8dp"
+                    android:padding="0dp" android:insetTop="0dp" android:insetBottom="0dp"
+                    android:backgroundTint="#7C4DFF"
+                    style="@style/Widget.MaterialComponents.Button"/>
+            </LinearLayout>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Срок выполнения" android:textSize="14sp"
+                android:textColor="?attr/appTextSecondary" android:layout_marginBottom="8dp"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:layout_marginBottom="24dp">
+                <TextView android:id="@+id/tvDueDate" android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:layout_weight="1"
+                    android:text="Не выбрано" android:textSize="15sp"
+                    android:textColor="?attr/appTextSecondary"/>
+                <Button android:id="@+id/btnPickDate" android:layout_width="wrap_content"
+                    android:layout_height="40dp" android:text="Выбрать"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:textColor="@color/purple_500"/>
+            </LinearLayout>
+
+            <Button android:id="@+id/btnSave" android:layout_width="match_parent"
+                android:layout_height="52dp" android:text="Сохранить"
+                android:backgroundTint="@color/purple_500" android:textColor="@android:color/white"
+                style="@style/Widget.MaterialComponents.Button"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

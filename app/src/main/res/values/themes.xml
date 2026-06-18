@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- LIGHT theme (default) -->
+    <style name="Theme.TodoGame" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/purple_200</item>
+        <item name="android:statusBarColor">@color/surface_light</item>
+        <item name="android:navigationBarColor">@color/surface_light</item>
+        <item name="android:windowBackground">@color/bg_light</item>
+        <item name="android:textColorPrimary">@color/text_primary_light</item>
+        <item name="android:textColorSecondary">@color/text_secondary_light</item>
+        <!-- Custom attrs -->
+        <item name="appBackground">@color/bg_light</item>
+        <item name="appSurface">@color/surface_light</item>
+        <item name="appSurface2">@color/surface_light2</item>
+        <item name="appTextPrimary">@color/text_primary_light</item>
+        <item name="appTextSecondary">@color/text_secondary_light</item>
+        <item name="appDivider">@color/divider_light</item>
+    </style>
+</resources>

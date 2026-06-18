@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="horizontal" android:gravity="center_vertical"
+    android:background="@drawable/bg_card_minimal"
+    android:layout_marginBottom="10dp" android:padding="14dp">
+
+    <com.todogame.app.views.AvatarView android:id="@+id/avatarView"
+        android:layout_width="42dp" android:layout_height="42dp"
+        android:layout_marginEnd="14dp"/>
+
+    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+        android:layout_weight="1" android:orientation="vertical">
+        <TextView android:id="@+id/tvUsername"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textSize="15sp" android:textStyle="bold" android:textColor="?attr/appTextPrimary"/>
+        <TextView android:id="@+id/tvSubtitle"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textSize="12sp" android:textColor="?attr/appTextSecondary" android:layout_marginTop="2dp"/>
+    </LinearLayout>
+
+    <!-- Универсальная кнопка действия (Добавить / Принять / Профиль) -->
+    <Button android:id="@+id/btnAction"
+        android:layout_width="wrap_content" android:layout_height="38dp"
+        android:textSize="12sp" android:textColor="@color/white"
+        android:background="@drawable/bg_button_accent"
+        android:paddingHorizontal="14dp" android:minWidth="0dp" android:minHeight="0dp"/>
+    <ImageButton android:id="@+id/btnSecondary"
+        android:layout_width="38dp" android:layout_height="38dp"
+        android:src="@drawable/ic_close"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:layout_marginStart="6dp" android:visibility="gone"
+        android:tint="?attr/appTextSecondary"/>
+</LinearLayout>

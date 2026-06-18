@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="horizontal" android:gravity="center_vertical"
+    android:background="@drawable/bg_card_minimal"
+    android:layout_marginBottom="10dp" android:padding="16dp">
+
+    <TextView android:id="@+id/tvItemIcon"
+        android:layout_width="44dp" android:layout_height="44dp"
+        android:gravity="center" android:textSize="24sp"
+        android:background="@drawable/bg_pill" android:layout_marginEnd="14dp"/>
+
+    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+        android:layout_weight="1" android:orientation="vertical">
+        <TextView android:id="@+id/tvItemName"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textSize="15sp" android:textStyle="bold" android:textColor="?attr/appTextPrimary"/>
+        <TextView android:id="@+id/tvItemType"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textSize="12sp" android:textColor="?attr/appTextSecondary" android:layout_marginTop="2dp"/>
+    </LinearLayout>
+
+    <!-- Цена / статус -->
+    <TextView android:id="@+id/tvPrice"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:textSize="14sp" android:textStyle="bold" android:textColor="@color/priority_medium"/>
+    <Button android:id="@+id/btnBuy"
+        android:layout_width="wrap_content" android:layout_height="40dp"
+        android:text="Купить" android:textSize="12sp" android:textColor="@color/white"
+        android:background="@drawable/bg_button_accent"
+        android:paddingHorizontal="16dp" android:layout_marginStart="10dp"
+        android:minWidth="0dp" android:minHeight="0dp"/>
+</LinearLayout>

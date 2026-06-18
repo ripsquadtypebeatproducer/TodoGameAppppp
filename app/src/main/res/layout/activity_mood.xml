@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:padding="24dp"
+    android:background="?attr/appBackground" android:gravity="center">
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Как прошёл день?" android:textSize="24sp" android:textStyle="bold"
+        android:textColor="?attr/appTextPrimary" android:layout_marginBottom="8dp"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Оцени свой день от 1 до 5"
+        android:textSize="14sp" android:textColor="?attr/appTextSecondary"
+        android:gravity="center" android:layout_marginBottom="32dp"/>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center"
+        android:layout_marginBottom="16dp">
+
+        <TextView android:id="@+id/mood1" android:layout_width="52dp" android:layout_height="52dp"
+            android:text="1" android:textSize="20sp" android:gravity="center"
+            android:textStyle="bold" android:textColor="@color/mood_1"
+            android:background="?attr/appSurface" android:layout_marginHorizontal="4dp"/>
+        <TextView android:id="@+id/mood2" android:layout_width="52dp" android:layout_height="52dp"
+            android:text="2" android:textSize="20sp" android:gravity="center"
+            android:textStyle="bold" android:textColor="@color/mood_2"
+            android:background="?attr/appSurface" android:layout_marginHorizontal="4dp"/>
+        <TextView android:id="@+id/mood3" android:layout_width="52dp" android:layout_height="52dp"
+            android:text="3" android:textSize="20sp" android:gravity="center"
+            android:textStyle="bold" android:textColor="@color/mood_3"
+            android:background="?attr/appSurface" android:layout_marginHorizontal="4dp"/>
+        <TextView android:id="@+id/mood4" android:layout_width="52dp" android:layout_height="52dp"
+            android:text="4" android:textSize="20sp" android:gravity="center"
+            android:textStyle="bold" android:textColor="@color/mood_4"
+            android:background="?attr/appSurface" android:layout_marginHorizontal="4dp"/>
+        <TextView android:id="@+id/mood5" android:layout_width="52dp" android:layout_height="52dp"
+            android:text="5" android:textSize="20sp" android:gravity="center"
+            android:textStyle="bold" android:textColor="@color/mood_5"
+            android:background="?attr/appSurface" android:layout_marginHorizontal="4dp"/>
+    </LinearLayout>
+
+    <TextView android:id="@+id/tvMoodLabel" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="Нормально"
+        android:textSize="18sp" android:textStyle="bold"
+        android:textColor="@color/mood_3" android:layout_marginBottom="24dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:hint="Заметка (необязательно)" android:layout_marginBottom="24dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etNote" android:layout_width="match_parent"
+            android:layout_height="80dp" android:gravity="top"
+            android:inputType="textCapSentences|textMultiLine"
+            android:textColor="?attr/appTextPrimary"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button android:id="@+id/btnSaveMood" android:layout_width="match_parent"
+        android:layout_height="52dp" android:text="Сохранить"
+        android:backgroundTint="@color/purple_500" android:textColor="@android:color/white"
+        style="@style/Widget.MaterialComponents.Button"/>
+    <TextView android:id="@+id/btnSkipMood" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="Пропустить"
+        android:padding="12dp" android:layout_gravity="center_horizontal"
+        android:textColor="?attr/appTextSecondary"/>
+</LinearLayout>

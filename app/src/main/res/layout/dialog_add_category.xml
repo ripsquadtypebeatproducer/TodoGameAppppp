@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical" android:padding="24dp">
+    <EditText android:id="@+id/etCategoryName" android:layout_width="match_parent"
+        android:layout_height="52dp" android:hint="Название папки"
+        android:layout_marginBottom="16dp"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Цвет:" android:layout_marginBottom="8dp"/>
+    <RadioGroup android:id="@+id/rgColors" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="horizontal"/>
+</LinearLayout>

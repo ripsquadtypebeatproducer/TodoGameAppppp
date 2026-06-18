@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Радиусы (минимализм: мягкие скругления) -->
+    <dimen name="radius_sm">10dp</dimen>
+    <dimen name="radius_md">14dp</dimen>
+    <dimen name="radius_lg">18dp</dimen>
+    <dimen name="radius_pill">22dp</dimen>
+
+    <!-- Отступы (много воздуха) -->
+    <dimen name="space_xs">4dp</dimen>
+    <dimen name="space_sm">8dp</dimen>
+    <dimen name="space_md">16dp</dimen>
+    <dimen name="space_lg">24dp</dimen>
+    <dimen name="space_xl">32dp</dimen>
+
+    <!-- Карточки -->
+    <dimen name="card_padding">16dp</dimen>
+    <dimen name="card_margin">10dp</dimen>
+    <dimen name="card_elevation">0dp</dimen>
+
+    <!-- Типографика -->
+    <dimen name="text_title">22sp</dimen>
+    <dimen name="text_heading">17sp</dimen>
+    <dimen name="text_body">15sp</dimen>
+    <dimen name="text_caption">12sp</dimen>
+    <dimen name="text_small">11sp</dimen>
+</resources>

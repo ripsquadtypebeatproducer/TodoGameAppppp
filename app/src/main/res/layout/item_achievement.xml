@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="horizontal" android:padding="12dp"
+    android:layout_marginBottom="6dp" android:gravity="center_vertical"
+    android:background="@drawable/bg_card_minimal">
+    <TextView android:id="@+id/tvAchIcon" android:layout_width="40dp"
+        android:layout_height="40dp" android:textSize="20sp" android:gravity="center"
+        android:layout_marginEnd="12dp"/>
+    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+        android:layout_weight="1" android:orientation="vertical">
+        <TextView android:id="@+id/tvAchName" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:textSize="14sp"
+            android:textStyle="bold" android:textColor="?attr/appTextPrimary"/>
+        <TextView android:id="@+id/tvAchDesc" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:textSize="12sp"
+            android:textColor="?attr/appTextSecondary" android:layout_marginTop="2dp"/>
+    </LinearLayout>
+    <ImageView android:id="@+id/ivAchLocked" android:layout_width="24dp"
+        android:layout_height="24dp" android:tint="?attr/appTextSecondary"
+        android:src="@drawable/ic_lock"
+        android:alpha="0.4"/>
+</LinearLayout>

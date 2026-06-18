@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="horizontal" android:background="@drawable/bg_card_minimal"
+    android:padding="14dp" android:layout_marginBottom="8dp" android:gravity="center_vertical">
+    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+        android:layout_weight="1" android:orientation="vertical">
+        <TextView android:id="@+id/tvTaskTitle" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:textSize="15sp"
+            android:textColor="?attr/appTextPrimary" android:textStyle="bold"/>
+        <TextView android:id="@+id/tvTaskDescription" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:textSize="12sp"
+            android:textColor="?attr/appTextSecondary" android:layout_marginTop="2dp"/>
+    </LinearLayout>
+    <Button android:id="@+id/btnRestore" android:layout_width="wrap_content"
+        android:layout_height="36dp" android:text="Вернуть"
+        android:backgroundTint="@color/purple_500" android:textColor="@android:color/white"
+        style="@style/Widget.MaterialComponents.Button" android:layout_marginEnd="8dp"/>
+    <ImageButton android:id="@+id/btnDelete" android:layout_width="36dp" android:layout_height="36dp"
+        android:tint="?attr/appTextSecondary"
+        android:src="@drawable/ic_delete" android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:padding="4dp" android:alpha="0.6"/>
+</LinearLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="?attr/appBackground" android:fillViewport="true">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="20dp">
+
+        <!-- Заголовок -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:layout_marginBottom="20dp">
+            <ImageView android:id="@+id/btnBack"
+                android:layout_width="28dp" android:layout_height="28dp"
+                android:src="@drawable/ic_back"
+                android:tint="?attr/appTextPrimary"/>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="Питомец"
+                android:textSize="22sp" android:textStyle="bold"
+                android:textColor="?attr/appTextPrimary" android:layout_marginStart="12dp"/>
+        </LinearLayout>
+
+        <!-- Питомец на «полянке» -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:gravity="center"
+            android:background="@drawable/bg_section" android:padding="24dp"
+            android:layout_marginBottom="16dp">
+
+            <com.todogame.app.views.PetView android:id="@+id/petView"
+                android:layout_width="200dp" android:layout_height="200dp"/>
+
+            <TextView android:id="@+id/tvPetName"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Лис" android:textSize="20sp" android:textStyle="bold"
+                android:textColor="?attr/appTextPrimary" android:layout_marginTop="8dp"/>
+            <TextView android:id="@+id/tvPetMood"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Счастлив" android:textSize="13sp"
+                android:textColor="?attr/appTextSecondary" android:layout_marginTop="2dp"/>
+
+            <!-- Шкала настроения -->
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Настроение" android:textSize="11sp"
+                android:textColor="?attr/appTextSecondary"
+                android:layout_marginTop="20dp" android:layout_marginBottom="6dp"/>
+            <ProgressBar android:id="@+id/pbHappiness"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent" android:layout_height="10dp"
+                android:max="100" android:progress="80"
+                android:progressTint="@color/priority_low"
+                android:progressBackgroundTint="?attr/appSurface2"/>
+        </LinearLayout>
+
+        <!-- Уровень и опыт -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:background="@drawable/bg_section"
+            android:padding="20dp" android:layout_marginBottom="16dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical">
+                <TextView android:id="@+id/tvLevel"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="Уровень 1"
+                    android:textSize="16sp" android:textStyle="bold"
+                    android:textColor="?attr/appTextPrimary"/>
+                <TextView android:id="@+id/tvXp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="0 / 100 XP" android:textSize="12sp"
+                    android:textColor="?attr/appTextSecondary"/>
+            </LinearLayout>
+            <ProgressBar android:id="@+id/pbXp"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent" android:layout_height="10dp"
+                android:max="100" android:progress="0"
+                android:progressTint="@color/purple_500"
+                android:progressBackgroundTint="?attr/appSurface2"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+
+        <!-- Выбор питомца (купленные) -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Сменить питомца" android:textSize="14sp" android:textStyle="bold"
+            android:textColor="?attr/appTextPrimary" android:layout_marginBottom="10dp"/>
+        <LinearLayout android:id="@+id/petChooser"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal"/>
+
+    </LinearLayout>
+</ScrollView>

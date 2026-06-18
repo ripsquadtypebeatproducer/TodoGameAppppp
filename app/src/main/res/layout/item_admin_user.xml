@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical" android:background="@drawable/bg_card_minimal"
+    android:padding="12dp" android:layout_marginBottom="8dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center_vertical">
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:orientation="vertical">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical">
+                <TextView android:id="@+id/tvUserName" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="User"
+                    android:textSize="15sp" android:textStyle="bold" android:textColor="?attr/appTextPrimary"/>
+                <TextView android:id="@+id/tvUserRole" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="USER"
+                    android:textSize="10sp" android:textColor="@android:color/white"
+                    android:background="@color/purple_500" android:padding="3dp"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+            <TextView android:id="@+id/tvUserEmail" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="email"
+                android:textSize="12sp" android:textColor="?attr/appTextSecondary"/>
+            <TextView android:id="@+id/tvUserStats" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="stats"
+                android:textSize="12sp" android:textColor="?attr/appTextSecondary"
+                android:layout_marginTop="2dp"/>
+        </LinearLayout>
+        <Button android:id="@+id/btnToggleRole" android:layout_width="wrap_content"
+            android:layout_height="40dp" android:text="↑ Admin" android:textSize="11sp"
+            android:minWidth="0dp" android:paddingHorizontal="10dp"
+            android:textColor="@android:color/white" android:backgroundTint="#4ECDC4"
+            android:insetTop="0dp" android:insetBottom="0dp"
+            style="@style/Widget.MaterialComponents.Button"/>
+        <ImageButton android:id="@+id/btnDeleteUser" android:layout_width="40dp"
+            android:layout_height="40dp" android:tint="?attr/appTextSecondary"
+        android:src="@drawable/ic_delete"
+            android:background="@android:color/transparent" android:layout_marginStart="4dp"
+            android:contentDescription="Удалить"/>
+    </LinearLayout>
+</LinearLayout>

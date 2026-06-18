@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="?attr/appBackground">
+
+    <!-- Header -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:background="?attr/appBackground"
+        android:paddingHorizontal="20dp" android:paddingTop="20dp" android:paddingBottom="8dp">
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:layout_marginBottom="14dp">
+
+            <!-- Title block: Сегодня + подзаголовок -->
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical">
+                <TextView android:id="@+id/tvUsername"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Сегодня" android:textSize="24sp" android:textStyle="bold"
+                    android:textColor="?attr/appTextPrimary"/>
+                <TextView android:id="@+id/tvChallengesPreview"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textSize="13sp" android:textColor="?attr/appTextSecondary"
+                    android:layout_marginTop="3dp"/>
+            </LinearLayout>
+
+            <!-- Streak pill (скруглённая) -->
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:background="@drawable/bg_pill" android:paddingHorizontal="14dp"
+                android:paddingVertical="8dp" android:layout_marginEnd="8dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="🔥" android:textSize="13sp" android:layout_marginEnd="6dp"/>
+                <TextView android:id="@+id/tvStreakCount"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="0" android:textSize="15sp" android:textStyle="bold"
+                    android:textColor="@color/purple_500"/>
+            </LinearLayout>
+
+            <!-- Settings -->
+            <ImageView android:id="@+id/ivSettings"
+                android:layout_width="38dp" android:layout_height="38dp"
+                android:src="@drawable/ic_settings"
+                android:padding="7dp"
+                android:tint="?attr/appTextSecondary"/>
+        </LinearLayout>
+
+        <!-- Mood banner -->
+        <LinearLayout android:id="@+id/moodBanner"
+            android:layout_width="match_parent" android:layout_height="42dp"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:background="@drawable/bg_pill" android:paddingHorizontal="14dp"
+            android:visibility="gone" android:layout_marginBottom="10dp">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="Как прошёл день? Оцени настроение"
+                android:textSize="13sp" android:textColor="?attr/appTextSecondary"/>
+            <ImageView android:layout_width="18dp" android:layout_height="18dp"
+                android:src="@drawable/ic_chevron_right" android:tint="?attr/appTextSecondary"/>
+        </LinearLayout>
+
+        <!-- Category chips -->
+        <HorizontalScrollView android:layout_width="match_parent" android:layout_height="42dp"
+            android:scrollbars="none">
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroup"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                app:singleSelection="true"/>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+    <!-- Task list -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTasks"
+        android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+        android:paddingHorizontal="20dp" android:paddingTop="4dp" android:clipToPadding="false"/>
+
+    <!-- FAB -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_gravity="end" android:layout_margin="16dp"
+        android:src="@drawable/ic_add"
+        app:backgroundTint="@color/purple_500"
+        android:layout_marginBottom="-8dp"/>
+
+    <!-- Bottom nav -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="60dp"
+        android:orientation="horizontal" android:background="?attr/appSurface"
+        android:elevation="8dp">
+        <LinearLayout android:id="@+id/navHome"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+            <ImageView android:layout_width="22dp" android:layout_height="22dp"
+                android:src="@drawable/ic_nav_today" android:tint="@color/purple_500"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Задачи" android:textSize="10sp" android:textColor="@color/purple_500"
+                android:layout_marginTop="3dp"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/navHabits"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+            <ImageView android:layout_width="22dp" android:layout_height="22dp"
+                android:src="@drawable/ic_nav_habits" android:tint="?attr/appTextSecondary"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Привычки" android:textSize="10sp"
+                android:textColor="?attr/appTextSecondary" android:layout_marginTop="3dp"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/navChallenges"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+            <ImageView android:layout_width="22dp" android:layout_height="22dp"
+                android:src="@drawable/ic_nav_challenges" android:tint="?attr/appTextSecondary"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Вызовы" android:textSize="10sp"
+                android:textColor="?attr/appTextSecondary" android:layout_marginTop="3dp"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/navProfile"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+            <ImageView android:layout_width="22dp" android:layout_height="22dp"
+                android:src="@drawable/ic_nav_profile" android:tint="?attr/appTextSecondary"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Профиль" android:textSize="10sp"
+                android:textColor="?attr/appTextSecondary" android:layout_marginTop="3dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

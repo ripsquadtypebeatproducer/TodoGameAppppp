@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TodoGame</string>
+    <string name="channel_mood_id">mood_reminder</string>
+    <string name="channel_mood_name">Напоминание о настроении</string>
+</resources>

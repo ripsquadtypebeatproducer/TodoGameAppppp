@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- DARK theme -->
+    <style name="Theme.TodoGame" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/purple_200</item>
+        <item name="android:statusBarColor">@color/surface_dark</item>
+        <item name="android:navigationBarColor">@color/surface_dark</item>
+        <item name="android:windowBackground">@color/bg_dark</item>
+        <item name="android:textColorPrimary">@color/text_primary_dark</item>
+        <item name="android:textColorSecondary">@color/text_secondary_dark</item>
+        <!-- Custom attrs -->
+        <item name="appBackground">@color/bg_dark</item>
+        <item name="appSurface">@color/surface_dark</item>
+        <item name="appSurface2">@color/surface_dark2</item>
+        <item name="appTextPrimary">@color/text_primary_dark</item>
+        <item name="appTextSecondary">@color/text_secondary_dark</item>
+        <item name="appDivider">@color/divider_dark</item>
+    </style>
+</resources>
